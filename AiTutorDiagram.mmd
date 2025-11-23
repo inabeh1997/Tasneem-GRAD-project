@@ -1,0 +1,100 @@
+erDiagram
+    STUDENTS ||--o{ ENROLLMENTS : enrolls
+    COURSES  ||--o{ ENROLLMENTS : has
+    TUTORS   ||--o{ COURSES : creates
+    COURSES  ||--o{ LESSONS : contains
+    STUDENTS ||--o{ SESSIONS : starts
+    TUTORS   ||--o{ SESSIONS : handles
+    COURSES  ||--o{ SESSIONS : relates_to
+    SESSIONS ||--o{ MESSAGES : has
+    LESSONS  ||--o{ QUIZ_QUESTIONS : includes
+    STUDENTS ||--o{ QUIZ_ATTEMPTS : makes
+    QUIZ_QUESTIONS ||--o{ QUIZ_ATTEMPTS : are_answered_in
+
+    STUDENTS ||--o{ USER_LOGINS : has
+    TUTORS   ||--o{ USER_LOGINS : has
+
+    STUDENTS {
+        int student_id PK
+        string full_name
+        string email
+        datetime created_at
+    }
+
+    TUTORS {
+        int tutor_id PK
+        string full_name
+        string specialization
+        boolean is_ai
+    }
+
+    COURSES {
+        int course_id PK
+        string title
+        string level
+        string description
+        int created_by_tutor_id FK
+        datetime created_at
+    }
+
+    ENROLLMENTS {
+        int enrollment_id PK
+        int student_id FK
+        int course_id FK
+        datetime enrolled_at
+    }
+
+    LESSONS {
+        int lesson_id PK
+        int course_id FK
+        string title
+        string content_summary
+        int order_index
+    }
+
+    SESSIONS {
+        int session_id PK
+        int student_id FK
+        int tutor_id FK
+        int course_id FK
+        string session_type
+        datetime started_at
+        datetime ended_at
+    }
+
+    MESSAGES {
+        int message_id PK
+        int session_id FK
+        string sender_type
+        string content
+        datetime sent_at
+    }
+
+    QUIZ_QUESTIONS {
+        int question_id PK
+        int lesson_id FK
+        string question_text
+        string difficulty
+    }
+
+    QUIZ_ATTEMPTS {
+        int attempt_id PK
+        int student_id FK
+        int question_id FK
+        string student_answer
+        boolean is_correct
+        datetime attempted_at
+    }
+
+    USER_LOGINS {
+        int user_login_id PK
+        string username
+        string password_hash
+        string role
+        int student_id FK
+        int tutor_id FK
+        boolean is_active
+        datetime last_login
+        datetime created_at
+    }
+    
