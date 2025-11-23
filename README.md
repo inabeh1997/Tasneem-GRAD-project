@@ -1,9 +1,5 @@
-# StudentProjectRepo
-
-application for AI student
-this repo is for making new application for student
-
-
-
-adding git to github
-
+<<<<<<< HEAD
+// Your local changes are here
+=======
+// The changes from the remote repository are here
+>>>>>>> [commit-hash-from-origin/main]
