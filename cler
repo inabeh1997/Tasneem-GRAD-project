@@ -1,0 +1,25 @@
+[33mcommit ccf531f7433c4bc0b57f7c1e42605ea55a08bdbb[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: ibrahim hassanin <inabeh79@gmail.com>
+Date:   Sun Nov 23 22:51:06 2025 +0300
+
+    erd diagram and sql script
+
+[33mcommit 533c47ee5f41e51c8751757f218097d355b3dbdd[m
+Author: ibrahim hassanin <inabeh79@gmail.com>
+Date:   Sun Nov 23 22:09:04 2025 +0300
+
+    adding file for digram sql tables and data
+
+[33mcommit 40aad9844ac13397a4dc7ef8637402ce5ce9bae2[m
+Author: Ibrahim Hassanin <123500426+inabeh1997@users.noreply.github.com>
+Date:   Sun Nov 23 13:38:11 2025 +0300
+
+    Clarify repository purpose in README
+    
+    Added a description for the repository's purpose.
+
+[33mcommit dd5171d1b2bcaaa6602685882dc1b76810b22f5c[m
+Author: Ibrahim Hassanin <123500426+inabeh1997@users.noreply.github.com>
+Date:   Sun Nov 23 13:37:18 2025 +0300
+
+    Add README with project title and description
